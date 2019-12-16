@@ -6,10 +6,14 @@
 // 创建app类  继承于  eui
 
 class App extends eui.UILayer {
-    // 构造函数入口
-    public constructor() {
-        super();
-        console.log('gone1')
-    }
-
+	// 构造函数入口
+	public constructor() {
+		super();
+		console.log('gone1')
+		console.log("1")
+	}
+	protected createChildren(): void {
+		super.createChildren()
+		console.log('super')
+	}
 }

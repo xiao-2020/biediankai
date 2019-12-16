@@ -14,11 +14,17 @@ r.prototype = e.prototype, t.prototype = new r();
 // 创建app类  继承于  eui
 var App = (function (_super) {
     __extends(App, _super);
+    // 构造函数入口
     function App() {
         var _this = _super.call(this) || this;
         console.log('gone1');
+        console.log("1");
         return _this;
     }
+    App.prototype.createChildren = function () {
+        _super.prototype.createChildren.call(this);
+        console.log('super');
+    };
     return App;
 }(eui.UILayer));
 __reflect(App.prototype, "App");
