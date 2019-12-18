@@ -16,16 +16,27 @@ var App = (function (_super) {
     __extends(App, _super);
     // 构造函数入口
     function App() {
-        var _this = _super.call(this) || this;
-        console.log('gone1');
-        console.log("1");
-        return _this;
+        return _super.call(this) || this;
     }
     App.prototype.createChildren = function () {
         _super.prototype.createChildren.call(this);
-        console.log('super');
+        // 全局绑定 生命周期
+        egret.lifecycle.onPause = function () {
+            console.log('app 进入后台');
+            egret.ticker.pause();
+        };
+        egret.lifecycle.onResume = function () {
+            console.log('app 进入	前台');
+            egret.ticker.resume();
+        };
+        // 初始化场景
+        this.init();
+    };
+    App.prototype.init = function () {
+        // 添加对象
+        console.log('done');
+        var object = new Body();
     };
     return App;
 }(eui.UILayer));
 __reflect(App.prototype, "App");
-//# sourceMappingURL=App.js.map
