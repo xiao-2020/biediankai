@@ -34,8 +34,8 @@ var App = (function (_super) {
     };
     App.prototype.init = function () {
         // 添加对象
-        console.log('done');
         var object = new Body();
+        this.addChild(object);
     };
     return App;
 }(eui.UILayer));

@@ -26,7 +26,7 @@ class App extends eui.UILayer {
 	}
 	private init() {
 		// 添加对象
-		console.log('done')
 		let object: egret.DisplayObject = new Body()
+		this.addChild(object)
 	}
 }
