@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<e:Skin class="skins.PanelSkin" minHeight="230" minWidth="450" xmlns:e="http://ns.egret.com/eui">
-    <e:Image left="0" right="0" bottom="0"  top="0" source="border_png" scale9Grid="2,2,12,12" />
-    <e:Group id="moveArea" left="0" right="0" top="0" height="45">
-        <e:Image left="0" right="0" bottom="0"  top="0" source="header_png"/>
-        <e:Label id="titleDisplay" size="20" fontFamily="Tahoma" textColor="0xFFFFFF"
-                 wordWrap="false" left="15" right="5" verticalCenter="0"/>
-    </e:Group>
-    <e:Button id="closeButton" label="close" bottom="5" horizontalCenter="0"/>
+<e:Skin class="skins.PanelSkin" minHeight="230" minWidth="450" xmlns:e="http://ns.egret.com/eui"
+        xmlns:w="http://ns.egret.com/wing">
+	<w:Config id="16f2d83f2ae" />
+	<e:Image left="1" right="-1" bottom="-1" top="1" source="border_png" scale9Grid="2,2,12,12" />
+	<e:Group id="moveArea" left="1" right="-1" top="1" height="45">
+		<e:Image left="0" right="0" bottom="0" top="0" source="header_png" />
+		<e:Label id="titleDisplay" size="20" fontFamily="Tahoma" textColor="0xFFFFFF" wordWrap="false" left="15" right="5"
+		         verticalCenter="0" />
+	</e:Group>
+	<e:Button id="closeButton" label="close" bottom="15" horizontalCenter="0" text="dsf" textAlign="center"
+	          verticalAlign="middle" anchorOffsetY="0" height="53" />
+	<e:Image source="button_down_png" x="259" y="180.5" />
+	<e:Image source="egret_icon_png" y="64" anchorOffsetX="0" width="73" anchorOffsetY="0" height="99" x="190" />
 </e:Skin>

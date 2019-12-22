@@ -1,6 +1,3 @@
-// stage 舞台 只有一个   相当于全局 document 对象
-// egret.displayObjectContainer  是显示类  继承于 diplayObject 类  是文档类
-// eui 相当于 elementui 一样是一套 ui 框架 可以在这基础上做  有利于适配
 var __reflect = (this && this.__reflect) || function (p, c, t) {
     p.__class__ = c, t ? t.push(c) : t = [c], p.__types__ = p.__types__ ? t.concat(p.__types__) : t;
 };
@@ -11,6 +8,9 @@ var __extends = this && this.__extends || function __extends(t, e) {
 for (var i in e) e.hasOwnProperty(i) && (t[i] = e[i]);
 r.prototype = e.prototype, t.prototype = new r();
 };
+// stage 舞台 只有一个   相当于全局 document 对象
+// egret.displayObjectContainer  是显示类  继承于 diplayObject 类  是文档类
+// eui 相当于 elementui 一样是一套 ui 框架 可以在这基础上做  有利于适配
 // 创建app类  继承于  eui
 var App = (function (_super) {
     __extends(App, _super);
@@ -34,8 +34,20 @@ var App = (function (_super) {
     };
     App.prototype.init = function () {
         // 添加对象
-        var object = new Body();
+        var object = new Body.Body();
         this.addChild(object);
+        var buttonSkin = "<e:Skin class=\"skins.ButtonSkin\" states=\"up,down,disabled\" minHeight=\"50\" minWidth=\"100\" xmlns:e=\"http://ns.egret.com/eui\">\n                <e:Label id=\"labelDisplay\" top=\"8\" bottom=\"8\" left=\"8\" right=\"8\"\n                         textColor=\"0xFFFFFF\" verticalAlign=\"middle\" textAlign=\"center\"/>\n                <e:Image id=\"iconDisplay\" horizontalCenter=\"0\" verticalCenter=\"0\"/>\n            </e:Skin>";
+        var button = new eui.Button();
+        button.skinName = buttonSkin;
+        button.label = "Button";
+        button.addEventListener(egret.TouchEvent.TOUCH_TAP, function (e) {
+            console.log('click');
+            var demoB = new DemoB();
+            demoB.sayName('click me!!!!!');
+        }, this);
+        button.x = 50;
+        button.y = 50;
+        this.addChild(button);
     };
     return App;
 }(eui.UILayer));
