@@ -89,8 +89,8 @@ var Main = (function (_super) {
         };
         //inject the custom material parser
         //注入自定义的素材解析器
-        var assetAdapter = new AssetAdapter();
-        egret.registerImplementation("eui.IAssetAdapter", assetAdapter);
+        var iAssetAdapter = new AssetAdapter();
+        egret.registerImplementation('eui.IAssetAdaoter', iAssetAdapter);
         egret.registerImplementation("eui.IThemeAdapter", new ThemeAdapter());
         this.runGame().catch(function (e) {
             console.log(e);
