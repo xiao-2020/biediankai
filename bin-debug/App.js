@@ -78,11 +78,9 @@ var App = (function (_super) {
     App.prototype.init = function () {
         // 添加对象
         var object = new Body.Body();
+        object.width = this.width;
+        object.height = this.height;
         this.addChild(object);
-        var ob = new Body.Bod();
-        var btn = new eui.Button();
-        btn.label = '按钮';
-        this.addChild(btn);
     };
     // 入口
     App.prototype.runGame = function () {

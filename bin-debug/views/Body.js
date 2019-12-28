@@ -15,12 +15,16 @@ var Body;
         function Body() {
             var _this = _super.call(this) || this;
             _this.addEventListener(egret.Event.ADDED_TO_STAGE, _this.init, false);
+            _this.init();
             return _this;
         }
         Body.prototype.init = function () {
-            var exmlText = "<?xml version=\"1.0\" encoding=\"utf-8\" ?> \n\t\t\t\t<e:Skin class=\"skins.ButtonSkin\" states=\"up,down,disabled\" minHeight=\"50\" minWidth=\"100\" xmlns:e=\"http://ns.egret.com/eui\"> \n\t\t\t\t\t\t<e:Image width=\"100%\" height=\"100%\" scale9Grid=\"1,3,8,8\" alpha.disabled=\"0.5\"\n\t\t\t\t\t\t\t\t\t\tsource=\"button_up_png\"\n\t\t\t\t\t\t\t\t\t\tsource.down=\"button_down_png\"/> \n\t\t\t\t\t\t<e:Label id=\"labelDisplay\" top=\"8\" bottom=\"8\" left=\"8\" right=\"8\"\n\t\t\t\t\t\t\t\t\t\tsize=\"20\" fontFamily=\"Tahoma 'Microsoft Yahei'\"\n\t\t\t\t\t\t\t\t\t\tverticalAlign=\"middle\" textAlign=\"center\" text=\"\u6309\u94AE\" textColor=\"0x000000\"/> \n\t\t\t\t\t\t<e:Image id=\"iconDisplay\" horizontalCenter=\"0\" verticalCenter=\"0\"/> \n\t\t\t\t</e:Skin>";
-            var shape = new egret.Shape();
-            console.log(this);
+            var button = new eui.CheckBox();
+            // button.skinName = "resource/skins/ButtonSkin.exml";
+            // button.width = 100
+            // button.height = 50
+            // button.label = 'anniu'
+            this.addChild(button);
         };
         return Body;
     }(egret.DisplayObjectContainer));

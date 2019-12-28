@@ -33,12 +33,9 @@ class App extends eui.UILayer {
 	private init() {
 		// 添加对象
 		let object: egret.DisplayObject = new Body.Body()
+		object.width = this.width
+		object.height = this.height
 		this.addChild(object)
-		let ob = new Body.Bod()
-
-		let btn = new eui.Button()
-		btn.label = '按钮'
-		this.addChild(btn)
 	}
 	// 入口
 	private async runGame() {
