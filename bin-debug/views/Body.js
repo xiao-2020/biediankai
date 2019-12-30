@@ -14,17 +14,19 @@ var Body;
         __extends(Body, _super);
         function Body() {
             var _this = _super.call(this) || this;
-            _this.addEventListener(egret.Event.ADDED_TO_STAGE, _this.init, false);
             _this.init();
             return _this;
         }
         Body.prototype.init = function () {
-            var button = new eui.CheckBox();
-            // button.skinName = "resource/skins/ButtonSkin.exml";
-            // button.width = 100
-            // button.height = 50
-            // button.label = 'anniu'
-            this.addChild(button);
+            var _this = this;
+            var btn = new eui.Button();
+            btn.width = 300;
+            btn.height = 400;
+            btn.label = 'ANII';
+            this.addChild(btn);
+            btn.addEventListener(egret.TouchEvent.TOUCH_TAP, function () {
+                console.log(_this);
+            }, btn, false);
         };
         return Body;
     }(egret.DisplayObjectContainer));
