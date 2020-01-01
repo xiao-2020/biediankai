@@ -1,29 +1,36 @@
 {
-	"engineVersion": "5.2.31",
-	"compilerVersion": "5.2.31",
-	"template": {},
-	"target": {
-		"current": "web"
-	},
-	"modules": [
-		{
-			"name": "egret"
-		},
-		{
-			"name": "eui"
-		},
-		{
-			"name": "assetsmanager"
-		},
-		{
-			"name": "tween"
-		},
-		{
-			"name": "promise"
-		},
-		{
-			"name": "demo",
-			"path": "./libs/demo"
-		}
-	]
+  "engineVersion": "5.2.31",
+  "compilerVersion": "5.2.31",
+  "template": {},
+  "target": {
+    "current": "web"
+  },
+  "modules": [
+    {
+      "name": "egret"
+    },
+    {
+      "name": "eui"
+    },
+    {
+      "name": "assetsmanager"
+    },
+    {
+      "name": "tween"
+    },
+    {
+      "name": "promise"
+    },
+    {
+      "name": "demo",
+      "path": "./libs/demo"
+    }
+  ],
+  "targets": {
+    "ios": {
+      "appname": "snake",
+      "packagename": "com.hinmu",
+      "hybrid": false
+    }
+  }
 }
