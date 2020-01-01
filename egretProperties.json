@@ -1,40 +1,36 @@
 {
-  "engineVersion": "5.2.31",
-  "compilerVersion": "5.2.31",
-  "template": {},
-  "target": {
-    "current": "web"
-  },
-  "modules": [
-    {
-      "name": "egret"
-    },
-    {
-      "name": "eui"
-    },
-    {
-      "name": "assetsmanager"
-    },
-    {
-      "name": "tween"
-    },
-    {
-      "name": "promise"
-    },
-    {
-      "name": "demo",
-      "path": "./libs/demo"
-    }
-  ],
-  "targets": {
-    "ios": {
-<<<<<<< HEAD
-      "appname": "snake",
-=======
-      "appname": "贪吃蛇",
->>>>>>> 4e9135d216eef9aa2010ebc14b0f5ed05480965b
-      "packagename": "com.hinmu",
-      "hybrid": false
-    }
-  }
+	"engineVersion": "5.2.31",
+	"compilerVersion": "5.2.31",
+	"template": {},
+	"target": {
+		"current": "web"
+	},
+	"modules": [
+		{
+			"name": "egret"
+		},
+		{
+			"name": "eui"
+		},
+		{
+			"name": "assetsmanager"
+		},
+		{
+			"name": "tween"
+		},
+		{
+			"name": "promise"
+		},
+		{
+			"name": "demo",
+			"path": "./libs/demo"
+		}
+	],
+	"targets": {
+		"ios": {
+			"appname": "snake",
+			"packagename": "com.hinmu",
+			"hybrid": false
+		}
+	}
 }

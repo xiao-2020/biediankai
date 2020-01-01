@@ -55,7 +55,7 @@ class App extends eui.UILayer {
 			// 开始加载资源
 			// / 加载默认图片
 			await RES.loadConfig("resource/default.res.json", "resource/");
-			// 加载主题皮肤
+			// 加载主题皮肤  （加载了主题以后，  主题中配置的组件默认实例化时 会自带默认主题样式  ）  
 			await this.loadTheme();
 			// 加载某个资源组  资源组 是一堆 key value 的映射  通过key 可以娶到对应的 资源
 			await RES.loadGroup("preload", 0, loadingView);

@@ -121,10 +121,10 @@ var App = (function (_super) {
                         // 开始加载资源
                         // / 加载默认图片
                         _a.sent();
-                        // 加载主题皮肤
+                        // 加载主题皮肤  （加载了主题以后，  主题中配置的组件默认实例化时 会自带默认主题样式  ）  
                         return [4 /*yield*/, this.loadTheme()];
                     case 2:
-                        // 加载主题皮肤
+                        // 加载主题皮肤  （加载了主题以后，  主题中配置的组件默认实例化时 会自带默认主题样式  ）  
                         _a.sent();
                         // 加载某个资源组  资源组 是一堆 key value 的映射  通过key 可以娶到对应的 资源
                         return [4 /*yield*/, RES.loadGroup("preload", 0, loadingView)];
