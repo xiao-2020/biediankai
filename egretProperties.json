@@ -28,7 +28,11 @@
   ],
   "targets": {
     "ios": {
+<<<<<<< HEAD
       "appname": "snake",
+=======
+      "appname": "贪吃蛇",
+>>>>>>> 4e9135d216eef9aa2010ebc14b0f5ed05480965b
       "packagename": "com.hinmu",
       "hybrid": false
     }
